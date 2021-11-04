@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {DATAType} from "../../assets/constans";
+import {DATAType} from "../../types/types_data_from_server/dataType";
 
 interface NodeProps {
   item: DATAType

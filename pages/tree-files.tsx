@@ -1,6 +1,6 @@
 import React from 'react';
 import Tree from "../components/TreeFiles/Tree";
-import {DATA} from "../assets/constans";
+import {DATA} from "../moc_data/fileTree";
 
 const TreeFiles = () => {
   return (

@@ -1,8 +1,4 @@
-export type DATAType = {
-  id?: string
-  label?: string
-  children?: DATAType[]
-}
+import {DATAType} from "../types/types_data_from_server/dataType";
 
 export const DATA: DATAType[] = [
   {
