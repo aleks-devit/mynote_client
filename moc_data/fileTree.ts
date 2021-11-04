@@ -21,6 +21,21 @@ export const DATA: DATAType[] = [
             id: '5',
             label: 'Cabbage',
           },
+          {
+            id: '32',
+            label: 'Salad',
+            children: [
+              {
+                id: '42',
+                label: 'Tomatoes',
+              },
+              {
+                id: '52',
+                label: 'Cabbage',
+              },
+
+            ],
+          },
         ],
       },
     ],
@@ -32,6 +47,8 @@ export const DATA: DATAType[] = [
       {
         id: '7',
         label: 'Beer',
+        children: [
+        ]
       },
       {
         id: '8',

@@ -8,15 +8,15 @@ interface BranchProps {
 }
 
 const Branch: FC<BranchProps> = ({item, level}) => {
-  const [selected, setSelected] = useState( false)
+  const [selected, setSelected] = useState(false)
 
-  const hasChildren = !!item.children && item.children.length !== 0
+  const hasChildren = !!item.children
 
   const renderBranches = () => {
-    if(hasChildren) {
+    if (hasChildren) {
       const newLevel = level + 1
 
-      return item.children &&  item.children.map((child: DATAType) => {
+      return item.children && item.children.map((child: DATAType) => {
         return <Branch key={child.id} item={child} level={newLevel}/>
       })
     }
@@ -31,10 +31,10 @@ const Branch: FC<BranchProps> = ({item, level}) => {
   return (
     <>
       <Node
-      item={item}
-      hasChildren={hasChildren}
-      level={level}
-      onToggle={toggleSelected}
+        selected={selected}
+        item={item}
+        level={level}
+        onToggle={hasChildren && toggleSelected}
       />
 
       {selected && renderBranches()}
