@@ -5,7 +5,7 @@ import {
   MainLayoutRow,
   MainLayoutLeftSide,
   MainLayoutWrapper,
-  MainLayoutHeader, MainLayoutFooter
+  MainLayoutHeader, MainLayoutFooter, MainLayoutRightSide
 } from "./styles"
 
 const MainLayout: FC = ({children}) => {
@@ -16,9 +16,9 @@ const MainLayout: FC = ({children}) => {
         <MainLayoutLeftSide>
           <Tree data={DATA}/>
         </MainLayoutLeftSide>
-        <div>
+        <MainLayoutRightSide>
           {children}
-        </div>
+        </MainLayoutRightSide>
       </MainLayoutRow>
       <MainLayoutFooter/>
     </MainLayoutWrapper>

@@ -22,6 +22,10 @@ export const MainLayoutLeftSide = styled.div`
   border-right: 3px solid black;
 `
 
+export const MainLayoutRightSide = styled.div`
+  flex: 1;
+`
+
 export const MainLayoutFooter = styled.div`
   height: 50px;
   background-color: lightgray;
