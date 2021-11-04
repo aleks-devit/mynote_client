@@ -1,28 +1,28 @@
 import styled from "styled-components"
 
-export const MainLayoutWrapperComponent = styled.div`
+export const MainLayoutWrapper = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 `
 
-export const MainLayoutHeaderComponent = styled.div`
+export const MainLayoutHeader = styled.div`
   height: 50px;
   background-color: lightgray;
   `
 
-export const MainLayoutRowComponent = styled.div`
+export const MainLayoutRow = styled.div`
   flex: 1;
   display: flex;
   height: 100%;
 `
 
-export const MainLayoutLeftSideComponent = styled.div`
+export const MainLayoutLeftSide = styled.div`
   width: 300px;
   border-right: 3px solid black;
 `
 
-export const MainLayoutFooterComponent = styled.div`
+export const MainLayoutFooter = styled.div`
   height: 50px;
   background-color: lightgray;
   `

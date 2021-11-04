@@ -2,26 +2,26 @@ import React, {FC} from 'react';
 import {DATA} from "../moc_data/fileTree";
 import Tree from "../components/TreeFiles/Tree";
 import {
-  MainLayoutRowComponent,
-  MainLayoutLeftSideComponent,
-  MainLayoutWrapperComponent,
-  MainLayoutHeaderComponent, MainLayoutFooterComponent
+  MainLayoutRow,
+  MainLayoutLeftSide,
+  MainLayoutWrapper,
+  MainLayoutHeader, MainLayoutFooter
 } from "./styles"
 
 const MainLayout: FC = ({children}) => {
   return (
-    <MainLayoutWrapperComponent>
-      <MainLayoutHeaderComponent/>
-      <MainLayoutRowComponent>
-        <MainLayoutLeftSideComponent>
+    <MainLayoutWrapper>
+      <MainLayoutHeader/>
+      <MainLayoutRow>
+        <MainLayoutLeftSide>
           <Tree data={DATA}/>
-        </MainLayoutLeftSideComponent>
+        </MainLayoutLeftSide>
         <div>
           {children}
         </div>
-      </MainLayoutRowComponent>
-      <MainLayoutFooterComponent/>
-    </MainLayoutWrapperComponent>
+      </MainLayoutRow>
+      <MainLayoutFooter/>
+    </MainLayoutWrapper>
   );
 };
 

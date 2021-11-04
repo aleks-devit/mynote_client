@@ -1,16 +1,14 @@
 import React, {useState} from 'react';
-import styles from "../styles/Note.module.scss";
-import ReactMarkdown from "react-markdown";
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import {NoteWrapper, NoteTextArea, NoteMarkDown} from "./styles"
 
 const Note = () => {
     const [input, setInput] = useState('')
 
     return (
-        <div className={styles.wrapper}>
-            <textarea autoFocus className={styles.textarea} value={input} onChange={e => setInput(e.target.value)}/>
-            <ReactMarkdown
-                className={styles.markdown}
+        <NoteWrapper>
+            <NoteTextArea autoFocus value={input} onChange={e => setInput(e.target.value)}/>
+            <NoteMarkDown
                 components={{
                     code({node, inline, className, children}) {
                         const match = /language-(\w+)/.exec(className || '')
@@ -27,8 +25,8 @@ const Note = () => {
                 }}
             >
                 {input}
-            </ReactMarkdown>
-        </div>
+            </NoteMarkDown>
+        </NoteWrapper>
     );
 };
 
